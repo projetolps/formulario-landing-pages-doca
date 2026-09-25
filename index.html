@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Diagnóstico rápido da Doca Company para entender o momento de marketing da sua empresa."
+    />
+    <meta name="theme-color" content="#121212" />
+    <title>Diagnóstico Doca | Marketing e Vendas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="texture" aria-hidden="true"></div>
+    <div class="ambient ambient-red" aria-hidden="true"></div>
+    <div class="ambient ambient-green" aria-hidden="true"></div>
+
+    <svg class="doodle doodle-left" viewBox="0 0 320 760" aria-hidden="true">
+      <path d="M-25 94C81 32 213 54 267 142c55 90 1 179-87 187-95 9-122-78-68-128 59-55 151-16 147 75-4 108-94 177-207 192" />
+      <path d="M36 626c38-77 115-82 159-25 43 55 22 129-35 149" />
+      <path d="M52 522h42M73 501v42" />
+      <rect x="205" y="570" width="36" height="36" rx="7" />
+    </svg>
+
+    <svg class="doodle doodle-right" viewBox="0 0 360 760" aria-hidden="true">
+      <circle cx="216" cy="132" r="91" />
+      <circle cx="216" cy="132" r="20" />
+      <path d="M270 245c62 45 60 137 3 187-42 37-101 27-113-14-12-40 26-70 61-45 39 29 13 97-39 126" />
+      <path d="M248 612h48M272 588v48" />
+      <rect x="63" y="538" width="42" height="42" rx="4" />
+    </svg>
+
+    <main class="shell">
+      <header class="brand-bar">
+        <a class="logo-link" href="#" aria-label="Doca Company, início do formulário">
+          <img
+            src="https://res.cloudinary.com/dqm8alspo/image/upload/c_crop,x_150,y_390,w_780,h_300/v1782485935/Logo_Doca_PNG_oz3ox5.png"
+            alt="Doca Company"
+          />
+        </a>
+        <span class="brand-line" aria-hidden="true"></span>
+        <p>marketing + vendas</p>
+      </header>
+
+      <section class="form-card" aria-labelledby="form-title">
+        <div class="progress-wrap">
+          <div class="progress-meta">
+            <span id="progress-label">Pergunta 1 de 4</span>
+            <span id="progress-value">0%</span>
+          </div>
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            aria-label="Progresso do formulário"
+          >
+            <span id="progress-bar"></span>
+          </div>
+        </div>
+
+        <form id="lead-form" novalidate>
+          <section class="step step-intro is-active" data-step="0">
+            <div class="intro-copy">
+              <p class="eyebrow"><i></i> diagnóstico doca</p>
+              <h1 id="form-title">
+                Atraia clientes que já estão procurando pelo que você oferece e
+                leve novas oportunidades ao seu WhatsApp
+                <em>24 horas por dia, mesmo sem depender de anúncios.</em>
+              </h1>
+              <p class="intro-text">
+                Uma landing page ou site bem estruturado apresenta sua empresa,
+                gera confiança e transforma interesse em pedidos de orçamento,
+                mesmo enquanto você não está online.
+              </p>
+              <ul class="method-tags" aria-label="Benefícios do diagnóstico">
+                <li><i class="red"></i>Estratégia com clareza</li>
+                <li><i></i>Experiência profissional</li>
+                <li><i class="red"></i>Foco em conversão</li>
+              </ul>
+              <p class="time-note"><span>◷</span> Responda em menos de 1 minuto.</p>
+            </div>
+
+            <div class="question-card">
+              <div class="question-topline">
+                <p class="mini-label">vamos começar</p>
+                <span>01</span>
+              </div>
+              <h2>Como podemos chamar você?</h2>
+              <p class="question-copy">Preencha seu nome e sobrenome.</p>
+              <div class="name-grid">
+                <label class="field">
+                  <span>Nome</span>
+                  <input
+                    id="first-name"
+                    name="first_name"
+                    type="text"
+                    autocomplete="given-name"
+                    placeholder="Seu nome"
+                    minlength="2"
+                    required
+                  />
+                </label>
+                <label class="field">
+                  <span>Sobrenome</span>
+                  <input
+                    id="last-name"
+                    name="last_name"
+                    type="text"
+                    autocomplete="family-name"
+                    placeholder="Seu sobrenome"
+                    minlength="2"
+                    required
+                  />
+                </label>
+              </div>
+              <p class="field-error" data-error-for="identity" aria-live="polite"></p>
+              <button class="button button-primary button-full" type="button" data-next>
+                Começar <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="step" data-step="1" aria-labelledby="question-phone">
+            <div class="step-heading">
+              <div class="question-topline">
+                <p class="mini-label">vamos nos conhecer</p>
+                <span>02</span>
+              </div>
+              <h2 id="question-phone">Qual é o seu telefone?</h2>
+              <p>Inclua o DDD. Usaremos este número apenas para falar sobre o seu diagnóstico.</p>
+            </div>
+            <label class="phone-field" for="phone">
+              <span class="phone-prefix">+55</span>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="tel-national"
+                placeholder="(00) 00000-0000"
+                maxlength="19"
+                required
+              />
+            </label>
+            <p class="field-error" data-error-for="phone" aria-live="polite"></p>
+            <div class="actions">
+              <button class="button button-secondary" type="button" data-back>
+                <span aria-hidden="true">←</span> Voltar
+              </button>
+              <button class="button button-primary" type="button" data-next>
+                Próximo <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="step" data-step="2" aria-labelledby="question-email">
+            <div class="step-heading">
+              <div class="question-topline">
+                <p class="mini-label">seu melhor contato</p>
+                <span>03</span>
+              </div>
+              <h2 id="question-email">Qual é o seu melhor e-mail?</h2>
+              <p>Assim conseguimos manter o contato com você de forma organizada.</p>
+            </div>
+            <label class="field field-large">
+              <span>E-mail</span>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                placeholder="voce@empresa.com.br"
+                required
+              />
+            </label>
+            <p class="field-error" data-error-for="email" aria-live="polite"></p>
+            <div class="actions">
+              <button class="button button-secondary" type="button" data-back>
+                <span aria-hidden="true">←</span> Voltar
+              </button>
+              <button class="button button-primary" type="button" data-next>
+                Próximo <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </section>
+
+          <section class="step" data-step="3" aria-labelledby="question-marketing">
+            <div class="step-heading">
+              <div class="question-topline">
+                <p class="mini-label">cenário atual</p>
+                <span>04</span>
+              </div>
+              <h2 id="question-marketing">Sua empresa já investe em marketing?</h2>
+              <p>Selecione a opção que representa o momento atual do seu negócio.</p>
+            </div>
+            <fieldset class="choice-grid">
+              <legend class="sr-only">Investimento atual em marketing</legend>
+              <label class="choice">
+                <input type="radio" name="invests_in_marketing" value="sim" required />
+                <span><strong>Sim</strong>Já invisto em marketing</span>
+                <i aria-hidden="true"></i>
+              </label>
+              <label class="choice">
+                <input type="radio" name="invests_in_marketing" value="nao" />
+                <span><strong>Não</strong>Ainda não invisto em marketing</span>
+                <i aria-hidden="true"></i>
+              </label>
+            </fieldset>
+            <p class="field-error" data-error-for="invests_in_marketing" aria-live="polite"></p>
+            <p class="submit-error" id="submit-error" role="alert"></p>
+            <div class="actions">
+              <button class="button button-secondary" type="button" data-back>
+                <span aria-hidden="true">←</span> Voltar
+              </button>
+              <button class="button button-primary" id="submit-button" type="submit">
+                Enviar e ir ao WhatsApp <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </section>
+        </form>
+
+        <section class="success" id="success" hidden aria-labelledby="success-title" tabindex="-1">
+          <div class="success-mark" aria-hidden="true"><span>✓</span></div>
+          <p class="eyebrow"><i></i> diagnóstico concluído</p>
+          <h2 id="success-title">Rota traçada, <span id="success-name">tudo certo</span>.</h2>
+          <p>
+            Recebemos suas informações. A equipe da Doca já pode entender melhor
+            o momento da sua empresa e preparar o próximo passo.
+          </p>
+          <button class="button button-primary" id="restart-button" type="button">
+            Revisar respostas <span aria-hidden="true">↺</span>
+          </button>
+        </section>
+      </section>
+
+      <footer>
+        <span>© <span id="year"></span> Doca Company</span>
+        <span>Direcionamento · Otimização · Conversão · Aceleração</span>
+      </footer>
+    </main>
+
+    <noscript>
+      <div class="noscript">Ative o JavaScript para preencher o diagnóstico.</div>
+    </noscript>
+  </body>
+</html>
